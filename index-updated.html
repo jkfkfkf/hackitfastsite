@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackItFast - Custom Hackintosh EFI Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-primary { background-color: #0070f3; }
+        .text-primary { color: #0070f3; }
+        .border-primary { border-color: #0070f3; }
+        .hover\:bg-primary:hover { background-color: #0070f3; }
+        .container-custom { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .bg-neutral-light { background-color: #f5f5f7; }
+        .text-neutral-mid { color: #6e6e73; }
+        .text-neutral-dark { color: #1d1d1f; }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+        <div class="container-custom py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">HackItFast</h1>
+                </div>
+                <img src="image.png" alt="A beautiful scenery" style="position: absolute; top: 10px; left: 10px; width: 300px; height: 300px; border-radius: 8px; border: 2px solid #ddd;">
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-neutral-dark hover:text-primary">Home</a>
+                    <a href="#products" class="text-neutral-dark hover:text-primary">Products</a>
+                    <a href="#compatibility" class="text-neutral-dark hover:text-primary">Compatibility</a>
+                    <a href="#faq" class="text-neutral-dark hover:text-primary">FAQ</a>
+                    <a href="#contact" class="text-neutral-dark hover:text-primary">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-neutral-dark hover:text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <span class="ml-1">Cart (<span id="cart-count">0</span>)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-neutral-light">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-neutral-dark mb-4">
+                        Need a Hackintosh? Get it fast!
+                    </h1>
+                    <p class="text-xl text-neutral-mid mb-6">
+                        With HackItFast, it's built to last!
+                    </p>
+                    <p class="mb-8 text-neutral-mid">
+                        Custom EFI solutions for your hardware, ensuring a stable and compatible macOS experience on your PC hardware.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#products" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors text-center">
+                            Browse Products
+                        </a>
+                        <a href="#compatibility" class="border border-primary text-primary font-bold py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+                            Check Compatibility
+                        </a>
+                    </div>
+                </div>
+                <div class="h-64 md:h-96 bg-white rounded-lg shadow-md flex items-center justify-center overflow-hidden">
+                    <div class="text-center p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9 9 0 0 1-9 9z"></path><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c.5 0 2 .8 3 .8s2.5-.8 3-.8a2.5 2.5 0 0 0 2.5-2.5c0-1.8-1.5-2.5-3-2.5-1 0-2.5.5-2.5.5s-1.5-.5-2.5-.5c-1.5 0-3 .7-3 2.5z"></path><path d="M12 8v9"></path><path d="M8 10v.5"></path><path d="M16 10v.5"></path></svg>
+                        <h3 class="text-xl font-bold mt-4">Hackintosh EFI Solutions</h3>
+                        <p class="text-neutral-mid mt-2">Custom-built for your hardware</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Why Choose HackItFast?</h2>
+                <p class="text-neutral-mid max-w-xl mx-auto">
+                    Our custom EFI solutions are designed with stability and compatibility in mind.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-neutral-light p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Verified Compatibility</h3>
+                    <p class="text-neutral-mid">
+                        Every EFI is thoroughly tested to ensure compatibility with your specific hardware configuration.
+                    </p>
+                </div>
+                
+                <div class="bg-neutral-light p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Easy Installation</h3>
+                    <p class="text-neutral-mid">
+                        Step-by-step installation guides make setting up your Hackintosh a breeze.
+                    </p>
+                </div>
+                
+                <div class="bg-neutral-light p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"></path><path d="M19 16V8"></path><path d="M5 16v-6"></path><path d="M3 20h18"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Regular Updates</h3>
+                    <p class="text-neutral-mid">
+                        Stay current with macOS updates with our regularly updated EFI configurations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="py-16 bg-neutral-light">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Featured EFI Packages</h2>
+                <p class="text-neutral-mid max-w-xl mx-auto">
+                    Custom EFI solutions for popular hardware configurations.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="h-48 bg-neutral-light flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><path d="M12 4v16"></path><path d="M4 12h16"></path></svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Intel Core i7 EFI</h3>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-xs">Popular</span>
+                        </div>
+                        <p class="text-neutral-mid mb-4">
+                            Optimized for Intel Core i7 processors with compatible motherboards.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <span class="font-bold text-xl">£9.99</span>
+                            </div>
+                            <button onclick="addToCart(this.getAttribute('data-product'))" data-product="Ultimate EFI Bundle" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="h-48 bg-neutral-light flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><path d="M9 9h6v6H9z"></path></svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">AMD Ryzen EFI</h3>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-xs">New</span>
+                        </div>
+                        <p class="text-neutral-mid mb-4">
+                            Specially tuned EFI for AMD Ryzen processors and compatible boards.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <span class="font-bold text-xl">£14.99</span>
+                            </div>
+                            <button onclick="addToCart(this.getAttribute('data-product'))" data-product="Intel Core i7 EFI" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="h-48 bg-neutral-light flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Ultimate EFI Bundle</h3>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-xs">Best Value</span>
+                        </div>
+                        <p class="text-neutral-mid mb-4">
+                            Complete package with advanced features and lifetime updates.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <span class="font-bold text-xl">£19.99</span>
+                            </div>
+                            <button onclick="addToCart(this.getAttribute('data-product'))" data-product="Intel Core i7 EFI" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center text-primary font-bold">
+                    View All Products
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility Checker -->
+    <section id="compatibility" class="py-16 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">AI-Powered Compatibility Checker</h2>
+                <p class="text-neutral-mid max-w-xl mx-auto">
+                    Check if your hardware is compatible with our Hackintosh EFI solutions using AI analysis.
+                </p>
+            </div>
+            
+            <div class="bg-neutral-light p-8 rounded-xl max-w-3xl mx-auto">
+                <form id="compatibilityForm" class="space-y-6" onsubmit="event.preventDefault(); checkCompatibility();">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-neutral-dark font-medium mb-2">CPU Brand</label>
+                            <select id="cpuBrand" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                <option value="">Select CPU Brand</option>
+                                <option value="Intel">Intel</option>
+                                <option value="AMD">AMD</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-neutral-dark font-medium mb-2">CPU Model</label>
+                            <input id="cpuModel" type="text" placeholder="e.g. Core i7-10700K" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-neutral-dark font-medium mb-2">Motherboard</label>
+                            <input id="motherboard" type="text" placeholder="e.g. Gigabyte Z490" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <label class="block text-neutral-dark font-medium mb-2">Graphics Card</label>
+                            <input id="graphicsCard" type="text" placeholder="e.g. AMD RX 580" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">
+                            Check Compatibility with AI
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="compatibilityResult" class="mt-8 hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="py-16 bg-neutral-light">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+                <p class="text-neutral-mid max-w-xl mx-auto">
+                    Building your Hackintosh made simple with our custom EFI service.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-2xl font-bold">1</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Check Compatibility</h3>
+                    <p class="text-neutral-dark">Use our compatibility checker to see if your hardware will work with macOS. We'll recommend the best configuration.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-2xl font-bold">2</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Request Your EFI</h3>
+                    <p class="text-neutral-dark">Submit your hardware details and requirements. We'll create a custom EFI configuration specifically for your build.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-2xl font-bold">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Pay & Download</h3>
+                    <p class="text-neutral-dark">Once your custom EFI is ready, you'll receive an email with payment instructions. After payment, download your EFI and get installing!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-neutral-mid max-w-xl mx-auto">
+                    Get answers to common questions about our EFI products and Hackintosh builds.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                            <span class="text-lg font-medium">What is a Hackintosh?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mt-3 text-neutral-mid">
+                            <p>A Hackintosh is a computer that runs macOS on hardware not officially supported by Apple. Our EFI solutions make it possible to run macOS on compatible PC hardware.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                            <span class="text-lg font-medium">Is my hardware compatible?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mt-3 text-neutral-mid">
+                            <p>Use our compatibility checker to find out if your hardware is compatible. Generally, Intel CPUs (8th gen and newer) and AMD Ryzen CPUs with compatible motherboards and AMD graphics cards work best.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                            <span class="text-lg font-medium">What if my hardware isn't listed?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mt-3 text-neutral-mid">
+                            <p>Contact us for a custom compatibility assessment. We can create custom EFI solutions for hardware configurations not listed in our standard offerings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                            <span class="text-lg font-medium">What's included in an EFI package?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mt-3 text-neutral-mid">
+                            <p>Our EFI packages include a complete EFI folder with all necessary kexts, config.plist, and drivers for your hardware. We also provide detailed installation instructions and post-install optimization guides.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                            <span class="text-lg font-medium">Do you offer refunds?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mt-3 text-neutral-mid">
+                            <p>We offer refunds if our EFI solution doesn't work with the hardware you specified during purchase. Note that purchases made for incompatible hardware (not verified through our compatibility checker) are non-refundable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-neutral-light">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <p class="text-neutral-mid max-w-xl mx-auto">
+                    Have questions or need help? Get in touch with our team.
+                </p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm max-w-3xl mx-auto">
+                <form class="space-y-6" action="mailto:jimmykabobman@gmail.com" method="post" enctype="text/plain">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-neutral-dark font-medium mb-2">Your Name</label>
+                            <input name="name" type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <label class="block text-neutral-dark font-medium mb-2">Email Address</label>
+                            <input name="email" type="email" placeholder="your.email@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-neutral-dark font-medium mb-2">Request Type</label>
+                        <select name="requestType" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                            <option value="">Select Request Type</option>
+                            <option value="Custom EFI Request">Custom EFI Request</option>
+                            <option value="Compatibility Check">Compatibility Check</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-neutral-dark font-medium mb-2">Your Hardware Details</label>
+                        <textarea name="hardwareDetails" rows="4" placeholder="Please provide your CPU, motherboard, graphics card, and other relevant hardware details..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                    </div>
+                    
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-lg">
+                        <h4 class="font-bold text-primary mb-2">How Our Service Works:</h4>
+                        <ol class="list-decimal pl-5 space-y-1 text-neutral-dark">
+                            <li>Submit your hardware details using this form</li>
+                            <li>We'll create a custom EFI solution specifically for your hardware</li>
+                            <li>Once complete, we'll email you with payment instructions</li>
+                            <li>After payment, you'll receive your custom EFI package</li>
+                        </ol>
+                        <p class="mt-2 text-sm italic">You only pay after we've created your custom EFI - no upfront payment required!</p>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                            Request Custom EFI
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary bg-opacity-10">
+        <div class="container-custom text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Hackintosh Journey?</h2>
+            <p class="text-neutral-mid max-w-xl mx-auto mb-8">
+                Get your custom EFI solution today and experience macOS on your PC hardware.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#products" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                    Browse EFI Packages
+                </a>
+                <a href="#compatibility" class="border border-primary text-primary font-bold py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                    Check Compatibility
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Order Form Section -->
+<section class="py-16 bg-white" id="order">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Place Your EFI Order</h2>
+      <p class="text-neutral-mid max-w-xl mx-auto">Submit your order. We’ll contact you for payment once the EFI is ready.</p>
+    </div>
+    <div class="bg-neutral-light p-8 rounded-xl max-w-2xl mx-auto">
+      <form action="https://formsubmit.co/jimmykabobman@gmail.com" method="POST" onsubmit="prepareOrderForm()">
+        <input type="hidden" name="_subject" value="New EFI Order">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="Selected EFI Packages" id="efiSelection">
+
+        <div class="mb-4">
+          <label class="block mb-2 font-medium text-neutral-dark">Your Name</label>
+          <input type="text" name="name" required class="w-full p-3 border border-gray-300 rounded-lg">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-medium text-neutral-dark">Email Address</label>
+          <input type="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-medium text-neutral-dark">Any Notes</label>
+          <textarea name="notes" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Optional... e.g. OS version preferred, special requests, etc."></textarea>
+        </div>
+        <button type="submit" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">Submit Order</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+    <footer class="bg-neutral-dark text-white py-12">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HackItFast</h3>
+                    <p class="text-gray-400">
+                        Custom Hackintosh EFI solutions for your hardware, ensuring a stable and compatible macOS experience.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#compatibility" class="text-gray-400 hover:text-white transition-colors">Compatibility</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Installation Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Troubleshooting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">macOS Updates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            jimmykabobman@gmail.com
+                        </li>
+                        <!-- Contact via email only -->
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <h4 class="font-bold mb-2">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 HackItFast. All rights reserved.</p>
+                <p class="mt-2">Disclaimer: HackItFast provides EFI configurations for educational purposes. macOS is a trademark of Apple Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqButtons = document.querySelectorAll('#faq button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    
+                    // Toggle visibility
+                    if (content.style.display === 'none' || !content.style.display) {
+                        content.style.display = 'block';
+                        button.querySelector('svg').style.transform = 'rotate(180deg)';
+                    } else {
+                        content.style.display = 'none';
+                        button.querySelector('svg').style.transform = 'rotate(0)';
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- AI Compatibility Checker Script -->
+    <script src="compatibility.js"></script>
+
+<script>
+  let cartItems = [];
+
+  function addToCart(productName) {
+    cartItems.push(productName);
+    document.getElementById("cart-count").innerText = cartItems.length;
+  }
+
+  function prepareOrderForm() {
+    document.getElementById("efiSelection").value = cartItems.join(", ");
+  }
+</script>
+
+</body>
+</html>
